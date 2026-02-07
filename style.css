@@ -44,7 +44,7 @@ body {
 }
 @keyframes curtainSweep { to { transform: translateX(100%); } }
 
-/* CTA */
+/* STICKY CTA */
 .sticky-cta {
   position: fixed;
   right: 24px;
@@ -112,8 +112,10 @@ p { max-width: 600px; color: #b5b5b5; }
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  background: #111;
   transition: transform .4s ease;
 }
+
 .work-card:hover { transform: translateY(-6px); }
 
 .work-card img {
@@ -122,6 +124,22 @@ p { max-width: 600px; color: #b5b5b5; }
   object-fit: cover;
 }
 
+/* CARD-SPECIFIC ALIGNMENT (IMPORTANT FIX) */
+.work-card.poster img {
+  object-position: center 20%;
+}
+
+.work-card.thumbnail img {
+  object-position: center 15%;
+}
+
+.work-card.branding img {
+  object-position: center center;
+  padding: 12px;
+  background: #fff;
+}
+
+/* TAG */
 .work-tag {
   position: absolute;
   bottom: 16px;
