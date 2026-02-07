@@ -61,20 +61,22 @@
       <p class="reveal delay-2">A selection of concept-driven visual work.</p>
 
       <div class="work-grid">
-        <div class="work-card reveal delay-2" onclick="openLightbox('poster.jpg')">
+
+        <div class="work-card poster reveal delay-2" onclick="openLightbox('poster.jpg')">
           <img src="poster.jpg" alt="Poster Design">
           <span class="work-tag">Poster</span>
         </div>
 
-        <div class="work-card reveal delay-3" onclick="openLightbox('thumbnail.jpg')">
+        <div class="work-card thumbnail reveal delay-3" onclick="openLightbox('thumbnail.jpg')">
           <img src="thumbnail.jpg" alt="Thumbnail Design">
           <span class="work-tag">Thumbnail</span>
         </div>
 
-        <div class="work-card reveal delay-4" onclick="openLightbox('branding.jpg')">
+        <div class="work-card branding reveal delay-4" onclick="openLightbox('branding.jpg')">
           <img src="branding.jpg" alt="Visual Branding System">
           <span class="work-tag">Visual Branding</span>
         </div>
+
       </div>
     </section>
 
@@ -118,13 +120,11 @@
     <img id="lightbox-img" src="" alt="">
   </div>
 
-  <!-- JS (MINIMAL, SEO SAFE) -->
+  <!-- JS -->
   <script>
     function openLightbox(src) {
-      const box = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
-      box.classList.add('active');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
 
